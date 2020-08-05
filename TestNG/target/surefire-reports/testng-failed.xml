@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestNGFourTaskTest]" verbose="0">
+  <test thread-count="5" name="Command line test(failed)" verbose="0">
+    <classes>
+      <class name="TestNGFourTaskTest">
+        <methods>
+          <include name="openStudyingWithTrainer"/>
+          <include name="openCertainCourse"/>
+          <include name="registrationUserAccount"/>
+          <include name="termination"/>
+          <include name="openMainPage"/>
+          <include name="startSite"/>
+          <include name="openPageWithCatalogCourses"/>
+          <include name="setup"/>
+          <include name="findInHomeSearchAndSelectJavaDeveloper"/>
+          <include name="checkEmptyForm"/>
+          <include name="playVideo"/>
+        </methods>
+      </class> <!-- TestNGFourTaskTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [TestNGFourTaskTest] -->
