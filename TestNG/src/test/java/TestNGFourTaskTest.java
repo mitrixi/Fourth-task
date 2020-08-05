@@ -111,11 +111,25 @@ public class TestNGFourTaskTest {
         assertThat(driver.getTitle(), equalTo("Java Developer - Online обучение на ITVDN"));
     }
 
-    @Test(dependsOnMethods = "openStudyingWithTrainer")
-    public void checkEmptyForm() {
+    @DataProvider(name = "dataProvider")
+    public Object[] dataProviderMethod() {
+        return new String[]{"Alex", "Bob", "Martin"};
+    }
+
+    @Test(dataProvider = "dataProvider")
+    public void checkEmptyForm(String data) {
+
+        WebElement buttonStudyingWithTrainer = driver.findElement(By.cssSelector("li.desktop.menu-liveonline-item a div span.menu-icon-EduWithTrainer.menu-item-icon"));
+        buttonStudyingWithTrainer.click();
+
+        WebElement buttonJavaDeveloper = driver.findElement(By.xpath("//div[@class='dropdown-block lo-specialities']//span[text()='Java Developer']"));
+        buttonJavaDeveloper.click();
 
         WebElement buttonSignUp = driver.findElement(By.cssSelector("button.face__button.btn-filled-orange.consultation-open-btn.consult-btn-js"));//.face__button btn-filled-orange consultation-open-btn consult-btn-js
         buttonSignUp.click();
+
+        WebElement inputName = driver.findElement(By.cssSelector("form#consultation-form input[placeholder='Фамилия*']"));
+        inputName.sendKeys(data);
 
         WebElement buttonSendRequest = driver.findElement(By.cssSelector("#consultation-form > div.submit-cont > button"));        //#consultation-form > div:nth-of-type(3) > button
         buttonSendRequest.click();

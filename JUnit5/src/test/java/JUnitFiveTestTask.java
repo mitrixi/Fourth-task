@@ -133,7 +133,7 @@ public class JUnitFiveTestTask implements Extension {
 
         assertEquals(driver.getTitle(), "Java Developer - Online обучение на ITVDN");
     }
-
+    
     @Tag("smoke")
     @Test
     @DisplayName("Check empty form")

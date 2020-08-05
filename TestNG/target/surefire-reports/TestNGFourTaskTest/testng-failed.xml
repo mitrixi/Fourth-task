@@ -7,14 +7,10 @@
         <methods>
           <include name="openStudyingWithTrainer"/>
           <include name="openCertainCourse"/>
-          <include name="registrationUserAccount"/>
           <include name="termination"/>
           <include name="openMainPage"/>
-          <include name="startSite"/>
-          <include name="openPageWithCatalogCourses"/>
           <include name="setup"/>
-          <include name="findInHomeSearchAndSelectJavaDeveloper"/>
-          <include name="checkEmptyForm"/>
+          <include name="checkEmptyForm" invocation-numbers="0 1 2"/>
           <include name="playVideo"/>
         </methods>
       </class> <!-- TestNGFourTaskTest -->
